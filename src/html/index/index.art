@@ -1,0 +1,10 @@
+{{extend '../../resource/component/layout.art'}}
+
+{{block 'meta'}}{{/block}}
+
+{{block 'title'}}index page{{/block}}
+
+{{block 'content'}}
+	<div id="root"></div>
+	<img src="../../resource/imgs/musicIcon.png" />
+{{/block}}
