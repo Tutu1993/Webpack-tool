@@ -3,6 +3,14 @@ const devServerConfig = {
 	hot: true,
 	inline: true,
 	progress: true,
-	compress: true
-};
-module.exports = devServerConfig;
+	compress: true,
+	proxy: {
+		'/interface/*': {
+			target: 'http://localhost:80',
+			changeOrigin: true,
+			secure: false,
+		},
+	},
+}
+
+module.exports = devServerConfig

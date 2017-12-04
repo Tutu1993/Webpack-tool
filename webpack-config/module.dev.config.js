@@ -1,6 +1,6 @@
-const dirVars = require('./base/dirVars.config.js');
-const moduleConfig = require('./inherit/module.config.js');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const dirVars = require('./base/dirVars.config.js')
+const moduleConfig = require('./inherit/module.config.js')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 moduleConfig.rules.push({
 	test: /\.js$/,
@@ -12,14 +12,14 @@ moduleConfig.rules.push({
 			plugins: ["transform-runtime"],
 			env: {
 				development: {
-					presets: ["react-hmre"]
-				}
-			}
-		}
+					presets: ["react-hmre"],
+				},
+			},
+		},
 	},
 	include: dirVars.srcDir,
-	exclude: /node_modules/
-});
+	exclude: /node_modules/,
+})
 
 moduleConfig.rules.push({
 	test: /\.css$/,
@@ -30,12 +30,12 @@ moduleConfig.rules.push({
 				loader: "css-loader",
 			},
 			{
-				loader: "postcss-loader"
-			}
-		]
+				loader: "postcss-loader",
+			},
+		],
 	}),
 	include: dirVars.srcDir,
-	exclude: /node_modules/
-});
+	exclude: /node_modules/,
+})
 
-module.exports = moduleConfig;
+module.exports = moduleConfig

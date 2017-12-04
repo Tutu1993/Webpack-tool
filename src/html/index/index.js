@@ -1,3 +1,5 @@
-require('cssDir/normalize.css');
+require('cssDir/global/normalize.css')
 
-console.log('start');
+const log = console.log.bind(console)
+
+log('apple')
